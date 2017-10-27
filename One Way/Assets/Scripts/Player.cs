@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour 
 {
-	public GameObject[] tracks;
+	//Älä koske tämän yläpuolelle mihinkään!!!
+
+	public GameObject[] tracks; //Luodaan GameObject-lista, johon lisätään Inspectorista "radat"
 	int currentTrack; //0 = ylin, 1 = keskimmäinen, 2 = alin
 
 	void Start ()
 	{
-		currentTrack = 1;
+		currentTrack = 1; //Aloituspiste. Voidaan vaihtaa myös 0 tai 2, jos välttämättä haluaa.
 	}
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.UpArrow)) 
+		if (Input.GetKeyDown (KeyCode.UpArrow)) //Kun painetaan ylös-nuolta..
 		{
 			if (currentTrack == 1) //Jos olet tällä hetkellä 1 = keskimmäisellä raiteella...
 			{
@@ -27,7 +29,7 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.DownArrow)) 
+		if (Input.GetKeyDown (KeyCode.DownArrow)) //Kun painetaan alas-nuolta..
 		{
 			if (currentTrack == 1) // Jos olet tällä hetkellä 1 = keskimmäisellä raiteella..
 			{
@@ -40,6 +42,6 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		transform.position = tracks [currentTrack].transform.position;
+		transform.position = tracks [currentTrack].transform.position; //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
 	}
 }

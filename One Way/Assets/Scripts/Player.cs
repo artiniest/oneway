@@ -42,6 +42,6 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		transform.position = tracks [currentTrack].transform.position; //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
+		transform.position = new Vector2 (transform.position.x, tracks [currentTrack].transform.position.y); //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
 	}
 }

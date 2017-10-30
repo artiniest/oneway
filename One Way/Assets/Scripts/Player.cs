@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 	//Älä koske tämän yläpuolelle mihinkään!!!
 
 	public GameObject[] tracks; //Luodaan GameObject-lista, johon lisätään Inspectorista "radat"
+	public GameObject kamera;
 	public int currentTrack; //0 = kaukainen oikea, 1 = oikea, 2 = keskimmäinen, 3 = vasen, 4 = kaukainen vasen
 
 	void Start ()
@@ -52,9 +53,10 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter(Collider other) //Kun triggeröidytään..
+	void OnTriggerEnter2D(Collider2D other) //Kun triggeröidytään..
 	{
 		transform.Translate (new Vector2 (transform.position.x, +1)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
-		Destroy (other.GetComponent<Collider>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
+		kamera.transform.Translate (new Vector2(kamera.transform.position.x, +1)); //Siirretään kameraa myös ylöspäin
+		Destroy (other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
 	}
 }

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		switch (currentTrack) 
+		switch (currentTrack) //Switch case liikkumiselle. Älkää koskeko ilman valvojaa! :D
 		{
 		case -1:
 			currentTrack = 0;
@@ -50,7 +50,11 @@ public class Player : MonoBehaviour
 		{
 			currentTrack ++; //Siirry vasemmalle
 		}
+	}
 
-		//transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y); //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
+	void OnTriggerEnter(Collider other) //Kun triggeröidytään..
+	{
+		transform.Translate (new Vector2 (transform.position.x, +1)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
+		Destroy (other.GetComponent<Collider>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
 	}
 }

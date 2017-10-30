@@ -7,41 +7,50 @@ public class Player : MonoBehaviour
 	//Älä koske tämän yläpuolelle mihinkään!!!
 
 	public GameObject[] tracks; //Luodaan GameObject-lista, johon lisätään Inspectorista "radat"
-	int currentTrack; //0 = oikea, 1 = keskimmäinen, 2 = vasen
+	public int currentTrack; //0 = kaukainen oikea, 1 = oikea, 2 = keskimmäinen, 3 = vasen, 4 = kaukainen vasen
 
 	void Start ()
 	{
-		currentTrack = 1; //Aloituspiste. Voidaan vaihtaa myös 0 tai 2, jos välttämättä haluaa.
+		currentTrack = 2; //Aloituspiste, keskellä
 	}
 
 	void Update ()
 	{
+		switch (currentTrack) 
+		{
+		case -1:
+			currentTrack = 0;
+			break;
+		case 0:
+			transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y);
+			break;
+		case 1:
+			transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y);
+			break;
+		case 2:
+			transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y);
+			break;
+		case 3:
+			transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y);
+			break;
+		case 4:
+			transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y);
+			break;
+		case 5:
+			currentTrack = 4;
+			break;
+		}
+
 		if (Input.GetKeyDown (KeyCode.RightArrow)) //Kun painetaan oikealle-nuolta..
 		{
-			if (currentTrack == 1) //Jos olet tällä hetkellä 1 = keskimmäisellä raiteella...
-			{
-				currentTrack --; //Siirry oikealle
-			}
-
-			if (currentTrack == 2) //Jos olet tällä hetkellä 2 = vasemmalla raiteella
-			{
-				currentTrack --; //Siirry oikealle
-			}
+			currentTrack --; //Siirry oikealle
 		}
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) //Kun painetaan vasemmalle-nuolta..
 		{
-			if (currentTrack == 1) // Jos olet tällä hetkellä 1 = keskimmäisellä raiteella..
-			{
-				currentTrack ++; //Siirry vasemmalle
-			}
-
-			if (currentTrack == 0) //Jos olet tällä hetkellä 0 = ylimmällä raiteella..
-			{
-				currentTrack ++; //Siirry vasemmalle
-			}
+			currentTrack ++; //Siirry vasemmalle
 		}
 
-		transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y); //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
+		//transform.position = new Vector2 (tracks [currentTrack].transform.position.x, transform.position.y); //Siirretään pelaaja currentTrack-arvon mukaiselle raiteelle.
 	}
 }

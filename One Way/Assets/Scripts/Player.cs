@@ -57,15 +57,15 @@ public class Player : MonoBehaviour
 	{
         if (other.tag == "Obstacle") //Jos toisen objektin tagi on "Obstacle"...
         {
-            transform.Translate(new Vector2(transform.position.x, +1)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
+            transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
             kamera.transform.Translate(new Vector2(kamera.transform.position.x, +1)); //Siirretään kameraa myös ylöspäin
             Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
         }
 
         if (other.tag == "Powerup") //Jos toisen objektin tagi on "Powerup"
         {
-            transform.Translate(new Vector2(transform.position.x, -1)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
-            kamera.transform.Translate(new Vector2(kamera.transform.position.x, -1)); //Siirretään kameraa myös alaspäin
+            transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
+            kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
             Destroy(other.gameObject); //Tuhotaan poweruppi
         }
 

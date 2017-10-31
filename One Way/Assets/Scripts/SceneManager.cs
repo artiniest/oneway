@@ -9,7 +9,7 @@ public class SceneManager : MonoBehaviour
 	public GameObject[] tracks; //Array radoille
     public GameObject [] background; //Array taustoille
 	public float moveSpeed = 10f; //Liikkumisnopeus esteille
-    Vector3 returnpos = new Vector3 (0, -45, 10);
+    Vector3 returnpos = new Vector3 (0, -45, 10); //Palauspiste taustalle
 
 	void Start ()
 	{
@@ -28,7 +28,7 @@ public class SceneManager : MonoBehaviour
 			obj.transform.Translate (new Vector2 (0, moveSpeed * Time.deltaTime));
 		}
 
-        foreach (GameObject bg in background)
+        foreach (GameObject bg in background) //Taustojen liike ja palautus
         {
             bg.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));
 
@@ -41,6 +41,6 @@ public class SceneManager : MonoBehaviour
 
 	void Spawn ()
 	{
-		Instantiate (obstacles[0], tracks[Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan obstacles-listasta indexin mukainen objekti, randomille radalle.
+		Instantiate (obstacles[Random.Range(0, obstacles.Length)], tracks[Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan obstacles-listasta indexin mukainen objekti, randomille radalle.
 	}
 }

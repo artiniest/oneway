@@ -55,8 +55,16 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other) //Kun triggeröidytään..
 	{
-		transform.Translate (new Vector2 (transform.position.x, +1)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
-		kamera.transform.Translate (new Vector2(kamera.transform.position.x, +1)); //Siirretään kameraa myös ylöspäin
-		Destroy (other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
+        if (other.tag == "Obstacle") //Jos toisen objektin tagi on "Obstacle"...
+        {
+            transform.Translate(new Vector2(transform.position.x, +1)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
+            kamera.transform.Translate(new Vector2(kamera.transform.position.x, +1)); //Siirretään kameraa myös ylöspäin
+            Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
+        }
+
+        if (other.tag == "Darkness")//Jos toisen objektin tagi on "Darkness"...
+        {
+            Application.LoadLevel(0); //Ladataan 0-scene (nykyinen scene siis, atm) uudelleen.
+        }
 	}
 }

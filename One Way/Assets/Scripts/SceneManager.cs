@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour 
 {
+    public GameObject [] eyes;
     public GameObject [] powerups; //Array powerupeille, tästä spawnataan
     public GameObject [] spawnedPowerups; //Array spawnatuille powerupeille
     public GameObject[] obstacles; //Array esteille, tästä spawnataan
@@ -17,7 +18,8 @@ public class SceneManager : MonoBehaviour
 	void Start ()
 	{
 		InvokeRepeating ("SpawnObs", 1, 2); //Kuinka usein Spawn-funktio käynnistetään
-        InvokeRepeating("SpawnPower", 2, 3);
+        InvokeRepeating("SpawnPower", 2, 3); //Kuinka usein Poweruppeja spawnataan
+        InvokeRepeating("SpawnEyes", 3, 2);
 	}
 
 	void Update ()
@@ -35,7 +37,10 @@ public class SceneManager : MonoBehaviour
 
         foreach (GameObject power in spawnedPowerups) //Jokainen spawnedPowerup-arrayn objekti liikkuu tietyn verran y-akselilla
         {
-            power.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));
+            if (power != null)
+            {
+                power.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));
+            }
         }
 
         foreach (GameObject bg in background) //Taustojen liike ja palautus
@@ -63,6 +68,18 @@ public class SceneManager : MonoBehaviour
         {
             Instantiate(powerups [Random.Range(0, powerups.Length)], tracks [Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan powerups-listasta indexin -->
             //mukainen objekti, randomille radalle.
+        }
+    }
+
+    void SpawnEyes ()
+    {
+        int eyeRandomizer = Random.Range(0, 8); 
+        int eyeToSpawn = Random.Range(0, eyes.Length);
+        switch (eyeRandomizer)
+        {
+            case 02:
+                Instantiate(eyes [eyeToSpawn], new Vector3(eyes[eyeToSpawn].transform.position.x, -45, eyes[eyeToSpawn].transform.position.z), Quaternion.identity);
+                break;
         }
     }
 }

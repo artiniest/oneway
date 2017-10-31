@@ -73,7 +73,7 @@ public class SceneManager : MonoBehaviour
 
     void SpawnEyes ()
     {
-        int eyeRandomizer = Random.Range(0, 8); 
+        int eyeRandomizer = Random.Range(0, 6); 
         int eyeToSpawn = Random.Range(0, eyes.Length);
         switch (eyeRandomizer)
         {

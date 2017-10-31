@@ -62,6 +62,13 @@ public class Player : MonoBehaviour
             Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
         }
 
+        if (other.tag == "Powerup") //Jos toisen objektin tagi on "Powerup"
+        {
+            transform.Translate(new Vector2(transform.position.x, -1)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
+            kamera.transform.Translate(new Vector2(kamera.transform.position.x, -1)); //Siirretään kameraa myös alaspäin
+            Destroy(other.gameObject); //Tuhotaan poweruppi
+        }
+
         if (other.tag == "Darkness")//Jos toisen objektin tagi on "Darkness"...
         {
             Application.LoadLevel(0); //Ladataan 0-scene (nykyinen scene siis, atm) uudelleen.

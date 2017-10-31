@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Obstacle") //Jos toisen objektin tagi on "Obstacle"...
         {
             transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
-            kamera.transform.Translate(new Vector2(kamera.transform.position.x, +1)); //Siirretään kameraa myös ylöspäin
+            kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
             Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
         }
 

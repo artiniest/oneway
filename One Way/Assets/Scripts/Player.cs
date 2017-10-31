@@ -46,11 +46,13 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.RightArrow)) //Kun painetaan oikealle-nuolta..
 		{
+            GetComponent<Animator>().SetTrigger("Roll");
 			currentTrack --; //Siirry oikealle
 		}
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) //Kun painetaan vasemmalle-nuolta..
 		{
+            GetComponent<Animator>().SetTrigger("Roll2");
 			currentTrack ++; //Siirry vasemmalle
 		}
 	}

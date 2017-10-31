@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 	public GameObject[] tracks; //Luodaan GameObject-lista, johon lisätään Inspectorista "radat"
 	public GameObject kamera;
 	public int currentTrack; //0 = kaukainen oikea, 1 = oikea, 2 = keskimmäinen, 3 = vasen, 4 = kaukainen vasen
+    public AudioSource source;
 
 	void Start ()
 	{
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Obstacle") //Jos toisen objektin tagi on "Obstacle"...
         {
             face.SetActive(true);
+            source.Play();
             transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
             kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
             //Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)

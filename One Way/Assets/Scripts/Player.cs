@@ -61,8 +61,7 @@ public class Player : MonoBehaviour
             face.SetActive(true);
             transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
             kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
-            Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
-            face.SetActive(false);
+            //Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
         }
 
         if (other.tag == "Powerup") //Jos toisen objektin tagi on "Powerup"
@@ -77,4 +76,9 @@ public class Player : MonoBehaviour
             Application.LoadLevel(0); //Ladataan 0-scene (nykyinen scene siis, atm) uudelleen.
         }
 	}
+
+    void OnTriggerExit2D (Collider2D other)
+    {
+        face.SetActive(false);
+    }
 }

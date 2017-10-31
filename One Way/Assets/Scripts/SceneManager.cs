@@ -51,7 +51,8 @@ public class SceneManager : MonoBehaviour
 
 	void SpawnObs ()
 	{
-		Instantiate (obstacles[Random.Range(0, obstacles.Length)], tracks[Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan obstacles-listasta indexin -->
+        Instantiate(obstacles [Random.Range(0, obstacles.Length)], tracks [Random.Range(0, tracks.Length)].transform.position, Quaternion.identity);
+        Instantiate (obstacles[Random.Range(0, obstacles.Length)], tracks[Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan obstacles-listasta indexin -->
         //mukainen objekti, randomille radalle.
     }
 

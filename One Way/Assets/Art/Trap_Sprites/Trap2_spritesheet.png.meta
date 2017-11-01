@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d575ab357e7574898995df183b0d8a99
-timeCreated: 1509453116
+timeCreated: 1509530229
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -80,7 +80,7 @@ TextureImporter:
         width: 120
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -88,12 +88,12 @@ TextureImporter:
       name: Trap2_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 132
+        x: 136
         y: 0
         width: 120
         height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.49999988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

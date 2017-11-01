@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Darkness")//Jos toisen objektin tagi on "Darkness"...
         {
 			sproot.Play ();
-			Invoke ("Death", 4);
+			Invoke ("Death", 2);
         }
 	}
 

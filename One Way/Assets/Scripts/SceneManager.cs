@@ -33,6 +33,10 @@ public class SceneManager : MonoBehaviour
 		foreach (GameObject obj in spawnedObstacles) //Jokainen spawnedObstables-arrayn objekti liikkuu tietyn verran y-akselilla
 		{
 			obj.transform.Translate (new Vector2 (0, moveSpeed * Time.deltaTime));
+			if (obj.transform.position.y > 22.5f) 
+			{
+				Destroy (obj.gameObject);
+			}
 		}
 
         foreach (GameObject power in spawnedPowerups) //Jokainen spawnedPowerup-arrayn objekti liikkuu tietyn verran y-akselilla
@@ -41,6 +45,12 @@ public class SceneManager : MonoBehaviour
             {
                 power.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));
             }
+
+			if (power != null && power.transform.position.y > 22.5f) 
+			{
+				Destroy (power.gameObject);
+			}
+
         }
 
         foreach (GameObject bg in background) //Taustojen liike ja palautus

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: a2efa326b7dac4d9a870544ea631c1da
-timeCreated: 1509444756
-licenseType: Free
+timeCreated: 1509523854
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: Player_Running_Sprite_Sheet_0
@@ -16,7 +16,6 @@ TextureImporter:
     21300018: Player_Running_Sprite_Sheet_9
     21300020: Player_Running_Sprite_Sheet_10
     21300022: Player_Running_Sprite_Sheet_11
-  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -25,8 +24,6 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
-    mipMapsPreserveCoverage: 0
-    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -42,13 +39,10 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    serializedVersion: 2
     filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -70,7 +64,6 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -79,7 +72,6 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,29 +85,27 @@ TextureImporter:
       name: Player_Running_Sprite_Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 3
         y: 2
-        width: 12
+        width: 9
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5068693, y: 0.61128515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 20
         y: 2
-        width: 12
+        width: 10
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5556423, y: 0.61128515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_2
@@ -123,27 +113,25 @@ TextureImporter:
         serializedVersion: 2
         x: 37
         y: 2
-        width: 12
+        width: 11
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.59554774, y: 0.57831174}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_3
       rect:
         serializedVersion: 2
-        x: 53
+        x: 52
         y: 2
         width: 12
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6236499, y: 0.5762509}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_4
@@ -151,55 +139,51 @@ TextureImporter:
         serializedVersion: 2
         x: 70
         y: 2
-        width: 12
+        width: 11
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.59554774, y: 0.61128515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_5
       rect:
         serializedVersion: 2
-        x: 87
+        x: 88
         y: 2
-        width: 12
+        width: 10
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5494598, y: 0.61128515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_6
       rect:
         serializedVersion: 2
-        x: 105
+        x: 106
         y: 2
-        width: 12
+        width: 9
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6133459}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_7
       rect:
         serializedVersion: 2
-        x: 121
+        x: 122
         y: 2
-        width: 12
+        width: 10
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.43817443, y: 0.61540675}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_8
@@ -207,41 +191,38 @@ TextureImporter:
         serializedVersion: 2
         x: 139
         y: 2
-        width: 12
+        width: 11
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.410073, y: 0.5803726}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_9
       rect:
         serializedVersion: 2
-        x: 155
+        x: 156
         y: 2
         width: 12
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3763504, y: 0.613346}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_10
       rect:
         serializedVersion: 2
-        x: 173
+        x: 174
         y: 2
-        width: 12
+        width: 11
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40445223, y: 0.61128515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Player_Running_Sprite_Sheet_11
@@ -249,16 +230,14 @@ TextureImporter:
         serializedVersion: 2
         x: 190
         y: 2
-        width: 12
+        width: 10
         height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45054016, y: 0.6154068}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
       tessellationDetail: 0
     outline: []
-    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

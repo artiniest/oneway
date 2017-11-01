@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 01d1e3bc253154a99b4c79347517c906
-timeCreated: 1509532785
+guid: 4dea0dbd65a034354b401a3f07b0dafd
+timeCreated: 1509537246
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player_Smoking_Sprite_Sheet_0
-    21300002: Player_Smoking_Sprite_Sheet_1
-    21300004: Player_Smoking_Sprite_Sheet_2
-    21300006: Player_Smoking_Sprite_Sheet_3
-    21300008: Player_Smoking_Sprite_Sheet_4
-    21300010: Player_Smoking_Sprite_Sheet_5
-    21300012: Player_Smoking_Sprite_Sheet_6
-    21300014: Player_Smoking_Sprite_Sheet_7
-    21300016: Player_Smoking_Sprite_Sheet_8
+    21300000: Player_Drinking_Sprite_Sheet_0
+    21300002: Player_Drinking_Sprite_Sheet_1
+    21300004: Player_Drinking_Sprite_Sheet_2
+    21300006: Player_Drinking_Sprite_Sheet_3
+    21300008: Player_Drinking_Sprite_Sheet_4
+    21300010: Player_Drinking_Sprite_Sheet_5
+    21300012: Player_Drinking_Sprite_Sheet_6
+    21300014: Player_Drinking_Sprite_Sheet_7
+    21300016: Player_Drinking_Sprite_Sheet_8
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -79,12 +79,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_0
+      name: Player_Drinking_Sprite_Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 12
+        x: 2
+        y: 1
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -92,12 +92,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_1
+      name: Player_Drinking_Sprite_Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 3
-        width: 11
+        x: 20
+        y: 2
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -105,12 +105,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_2
+      name: Player_Drinking_Sprite_Sheet_2
       rect:
         serializedVersion: 2
         x: 36
         y: 3
-        width: 11
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,12 +118,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_3
+      name: Player_Drinking_Sprite_Sheet_3
       rect:
         serializedVersion: 2
         x: 54
         y: 3
-        width: 10
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,12 +131,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_4
+      name: Player_Drinking_Sprite_Sheet_4
       rect:
         serializedVersion: 2
-        x: 72
+        x: 70
         y: 3
-        width: 10
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,12 +144,38 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_5
+      name: Player_Drinking_Sprite_Sheet_5
       rect:
         serializedVersion: 2
         x: 89
         y: 3
-        width: 10
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_Drinking_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 3
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_Drinking_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 3
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -157,38 +183,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_6
+      name: Player_Drinking_Sprite_Sheet_8
       rect:
         serializedVersion: 2
-        x: 106
-        y: 3
-        width: 13
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 3
-        width: 13
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_Smoking_Sprite_Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 3
-        width: 13
+        x: 137
+        y: 2
+        width: 17
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}

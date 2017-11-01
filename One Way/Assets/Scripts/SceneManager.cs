@@ -32,8 +32,11 @@ public class SceneManager : MonoBehaviour
 	{
 		foreach (GameObject obj in spawnedObstacles) //Jokainen spawnedObstables-arrayn objekti liikkuu tietyn verran y-akselilla
 		{
-			obj.transform.Translate (new Vector2 (0, moveSpeed * Time.deltaTime));
-			if (obj.transform.position.y > 22.5f) 
+			if (obj != null) 
+			{
+				obj.transform.Translate (new Vector2 (0, moveSpeed * Time.deltaTime));
+			}
+			if (obj.transform.position.y > 22.5f && obj != null) 
 			{
 				Destroy (obj.gameObject);
 			}

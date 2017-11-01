@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     //Älä koske tämän yläpuolelle mihinkään!!!
 
+	public Animation sproot;
     public GameObject face; //Naaama
 	public GameObject[] tracks; //Luodaan GameObject-lista, johon lisätään Inspectorista "radat"
 	public GameObject kamera;
@@ -77,8 +78,14 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Darkness")//Jos toisen objektin tagi on "Darkness"...
         {
-            Application.LoadLevel(0); //Ladataan 0-scene (nykyinen scene siis, atm) uudelleen.
+			sproot.Play ();
+			Invoke ("Death", 4);
         }
+	}
+
+	void Death ()
+	{
+		Application.LoadLevel(1); //Ladataan gameOver-scene.
 	}
 
     void OnTriggerExit2D (Collider2D other)

@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 			break;
 		case "Darkness":
 			sproot.Play ();
-			Invoke ("Death", 1);
+			Invoke ("Death", 2);
 			break;
 		}
 

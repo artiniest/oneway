@@ -16,12 +16,12 @@ public class Control : MonoBehaviour
 			Application.LoadLevel (levelToLoad);
 		}
 
-		if (isEnabled == false) 
+		if (isEnabled == false && img != null) 
 		{
 			img.gameObject.SetActive (false);
 		}
 
-		if (isEnabled == true) 
+		if (isEnabled == true && img != null) 
 		{
 			img.gameObject.SetActive (true);
 		}

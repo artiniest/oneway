@@ -18,7 +18,7 @@ public class SceneManager : MonoBehaviour
 	void Start ()
 	{
 		InvokeRepeating ("SpawnObs", 1, 2); //Kuinka usein Spawn-funktio käynnistetään
-        InvokeRepeating("SpawnPower", 0, 1); //Kuinka usein Poweruppeja spawnataan
+        InvokeRepeating("SpawnPower", 0, 2); //Kuinka usein Poweruppeja spawnataan
         InvokeRepeating("SpawnEyes", 3, 2);
 	}
 
@@ -76,12 +76,12 @@ public class SceneManager : MonoBehaviour
 
     void SpawnPower ()
     {
-       /* int powerRandomizer = Random.Range(0, 5); //Randomisoidaan milloin poweruppeja spawnaa
+       int powerRandomizer = Random.Range(0, 5); //Randomisoidaan milloin poweruppeja spawnaa
         if (powerRandomizer == 2)
-        {*/
+        {
             Instantiate(powerups [Random.Range(0, powerups.Length)], tracks [Random.Range(0, tracks.Length)].transform.position, Quaternion.identity); //Spawnataan powerups-listasta indexin -->
             //mukainen objekti, randomille radalle.
-       // }
+       }
     }
 
     void SpawnEyes ()

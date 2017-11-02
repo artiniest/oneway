@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) //Kun triggeröidytään..
+	void OnTriggerStay2D(Collider2D other) //Kun triggeröidytään..
 	{
 		switch (other.gameObject.tag) 
 		{
@@ -68,14 +68,7 @@ public class Player : MonoBehaviour
 			transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
 			kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
 			break;
-		case "Kuppi":
-			GetComponent<Animator> ().SetTrigger ("Kuppi");
-			transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
-			kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
-			Destroy(other.gameObject); //Tuhotaan poweruppi
-			break;
-		case "Piippu":
-			GetComponent<Animator> ().SetTrigger ("Piippu");
+		case "Powerup":
 			transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
 			kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
 			Destroy(other.gameObject); //Tuhotaan poweruppi
@@ -83,6 +76,16 @@ public class Player : MonoBehaviour
 		case "Darkness":
 			sproot.Play ();
 			Invoke ("Death", 2);
+			break;
+		}
+
+		switch (other.gameObject.name) 
+		{
+		case "Powerup1(Clone)":
+			GetComponent<Animator> ().SetTrigger ("Piippu");
+			break;
+		case "Powerup2(Clone)":
+			GetComponent<Animator> ().SetTrigger ("Kuppi");
 			break;
 		}
 	}

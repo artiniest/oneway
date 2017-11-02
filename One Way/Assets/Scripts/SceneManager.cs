@@ -24,8 +24,9 @@ public class SceneManager : MonoBehaviour
 
 	void Update ()
 	{
-		spawnedObstacles = GameObject.FindGameObjectsWithTag ("Obstacle"); //Etsii objekteja Obstacle-tagilla ja lisää ne listaan
-        spawnedPowerups = GameObject.FindGameObjectsWithTag("Powerup"); //Etsii objekteja Powerup-tagilla ja lisää ne listaan
+		spawnedPowerups = GameObject.FindGameObjectsWithTag ("Kuppi"); //Etsii objekteja Obstacle-tagilla ja lisää ne listaan
+		spawnedPowerups = GameObject.FindGameObjectsWithTag ("Piippu");
+        spawnedObstacles = GameObject.FindGameObjectsWithTag("Obstacle"); //Etsii objekteja Powerup-tagilla ja lisää ne listaan
 	}
 
 	void FixedUpdate()

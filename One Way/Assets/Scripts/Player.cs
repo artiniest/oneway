@@ -60,27 +60,31 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other) //Kun triggeröidytään..
 	{
-        if (other.tag == "Obstacle") //Jos toisen objektin tagi on "Obstacle"...
-        {
-            face.SetActive(true);
-            //source.Play();
-            transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
-            kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
-            //Destroy(other.GetComponent<Collider2D>()); //Tuhotaan esteen collider, ettei tule ongelmia :)
-        }
-
-        if (other.tag == "Powerup") //Jos toisen objektin tagi on "Powerup"
-        {
-            transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
-            kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
-            Destroy(other.gameObject); //Tuhotaan poweruppi
-        }
-
-        if (other.tag == "Darkness")//Jos toisen objektin tagi on "Darkness"...
-        {
+		switch (other.gameObject.tag) 
+		{
+		case "Obstacle":
+			face.SetActive(true);
+			//source.Play();
+			transform.Translate(new Vector2(transform.position.x, +2)); //Siirretään pelaajaa yksi yksikkö ylemmäs = lähemmäs lonkeroita
+			kamera.transform.Translate(new Vector2(kamera.transform.position.x, +2)); //Siirretään kameraa myös ylöspäin
+			break;
+		case "Kuppi":
+			GetComponent<Animator> ().SetTrigger ("Kuppi");
+			transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
+			kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
+			Destroy(other.gameObject); //Tuhotaan poweruppi
+			break;
+		case "Piippu":
+			GetComponent<Animator> ().SetTrigger ("Piippu");
+			transform.Translate(new Vector2(transform.position.x, -6)); //Siirretään pelaajaa yksi yksikkö alemmas = kauemmas lonkeroista
+			kamera.transform.Translate(new Vector2(kamera.transform.position.x, -6)); //Siirretään kameraa myös alaspäin
+			Destroy(other.gameObject); //Tuhotaan poweruppi
+			break;
+		case "Darkness":
 			sproot.Play ();
 			Invoke ("Death", 2);
-        }
+			break;
+		}
 	}
 
 	void Death ()
